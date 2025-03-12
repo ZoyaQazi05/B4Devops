@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'building'
+bat 'javac ZAQpipe.java'
+            }
+        }stage('Run') {
+            steps {
+                echo 'running'
+bat 'ZAQpipe.java'
+            }
+        }
+    }
+}
+    
